@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button button, button2, button3, button4;
+    Button b1,button2, button3, button4;
     TextView t1;
     EditText e1, e2;
 
@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         });
 
-
-        button = findViewById(R.id.add);
+        b1 = findViewById(R.id.add);
         button2 = findViewById(R.id.sub);
         button3 = findViewById(R.id.mul);
         button4 = findViewById(R.id.div);
@@ -40,38 +39,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         e1 = findViewById(R.id.editTextNumber);
         e2 = findViewById(R.id.editTextNumber2);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int a = Integer.parseInt(e1.getText().toString());
                 int b = Integer.parseInt(e2.getText().toString());
-                t1.setText("The Addition: " + (a + b));
+                t1.setText("Addition: " + (a + b));
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int c = Integer.parseInt(e1.getText().toString());
-                int d = Integer.parseInt(e2.getText().toString());
-                t1.setText("The subtraction: " + (c - d));
+                int a = Integer.parseInt(e1.getText().toString());
+                int b = Integer.parseInt(e2.getText().toString());
+                t1.setText("Subtraction: " + (a - b));
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int e = Integer.parseInt(e1.getText().toString());
-                int f = Integer.parseInt(e2.getText().toString());
-                t1.setText("The Multiplication: " + (e * f));
+                int a = Integer.parseInt(e1.getText().toString());
+                int b = Integer.parseInt(e2.getText().toString());
+                t1.setText("Multiplication: " + (a * b));
             }
         });
-        button4.setOnClickListener(new View.OnClickListener()
-
-    {
+        button4.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick (View view){
-        int g = Integer.parseInt(e1.getText().toString());
-        int h = Integer.parseInt(e2.getText().toString());
-        t1.setText("The Division: " + (g / h));
+        float a = Float.parseFloat(e1.getText().toString());
+        float b = Float.parseFloat(e2.getText().toString());
+        t1.setText("Division: " + (a / b));
     }
     });
 }
